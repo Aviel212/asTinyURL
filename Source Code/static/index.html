@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>As TinyURL Service</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script type="text/javascript" src="static/code/index.js"></script>
+    <link rel= "stylesheet" type= "text/css" href= "static/styles/index.css">
+</head>
+
+<body>
+    <table id='form_table'>
+        <tr>
+            <td>
+                <p>Enter a long URL: </p>
+            </td>
+            <td>
+                <input id='long_url' type="text">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="data">
+                <input type="button" value="Create Short URl" onclick="getsurl()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>The short URL generated: </p>
+            </td>
+            <td>
+                <div id="surl">{{ surl }}</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

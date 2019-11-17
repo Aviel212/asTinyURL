@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>As TinyURL Service</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script type="text/javascript" src="static/code/stats.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/styles/stats.css" />
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <td colspan="2">URL redirections registered:</td>
+        <td class="data">
+          <div id="url_registered">
+            {{ url_registered }}
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>URL redirections performed:</td>
+        <td>
+          <select id="time_re" onchange="get_redirections_amount()">
+            <option value="min" selected>Last Min</option>
+            <option value="hour">Last Hour</option>
+            <option value="day">Last Day</option>
+          </select>
+        </td>
+        <td class="data">
+          <div id="redirections_performed">
+            {{ redirections_performed }}
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Bad Requests performed:</td>
+        <td>
+          <select id="time_e" onchange="get_Errors_amount()">
+            <option value="min" selected>Last Min</option>
+            <option value="hour">Last Hour</option>
+            <option value="day">Last Day</option>
+          </select>
+        </td>
+        <td class="data">
+          <div id="errors_performed">
+            {{ errors_performed }}
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
